@@ -178,11 +178,10 @@ void ESP8266SendTaskPtr(void *p_arg)
 	u8 *SendBuf = 0;
 	OS_MSG_SIZE size;
 	while(1)
-	{		
+	{
 		SendBuf = (u8 *)OSTaskQPend(0,OS_OPT_PEND_BLOCKING,&size,0,&p_err);
 		
 		ESP8266SendNetData(SendBuf,size);	
-		
 	}
 }
 
