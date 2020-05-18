@@ -12,7 +12,6 @@ typedef struct{
 
 
 
-
 //串口相关
 #define ESP8266BAUDRATE UART4BAUDRATE 
 #define ESP8266READTIME (OSCfg_TickRate_Hz / (20000000 / ESP8266BAUDRATE)) //20000 = 20 （假设一个字节的bit数）* 1000ms
