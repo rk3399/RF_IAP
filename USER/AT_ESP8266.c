@@ -5,12 +5,12 @@
 #include "bsp.h"
 
 #include "IAP.h"
-#define ESP8266CCMDCount		4
+#define ESP8266CCMDCount		6
 
 const ESP8266CMDTypeDef ESP8266InitCMDList[ESP8266CCMDCount] = {
 	"AT\r\n",4,
-	//"AT+CWMODE_DEF=2\r\n",17,
-	//"AT+CWSAP_DEF=\"RF_IAP\",\"IAP_ESP8266\",1,3\r\n",41,
+	"AT+CWMODE_DEF=2\r\n",17,
+	"AT+CWSAP_DEF=\"RF_IAP\",\"IAP_ESP8266\",1,3\r\n",41,
 	"AT+CIPMODE=0\r\n",14,
 	"AT+CIPMUX=1\r\n",13,
 	"AT+CIPSERVER=1,52617\r\n",22

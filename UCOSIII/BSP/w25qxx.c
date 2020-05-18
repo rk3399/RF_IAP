@@ -185,14 +185,14 @@ static void W25QXX_Write_NoCheck(const u8* pBuffer,u32 WriteAddr,u16 NumByteToWr
 //WriteAddr:开始写入的地址(24bit)						
 //NumByteToWrite:要写入的字节数(最大65535) 
 
-//u8 W25QXX_BUFFER[4096];		 
+u8 W25QXX_BUF[4096];		 
 void W25QXX_Write(const u8* pBuffer,u32 WriteAddr,u16 NumByteToWrite)   
 { 
 	u32 secpos;
 	u16 secoff;
 	u16 secremain;	   
  	u16 i;    
-	u8  W25QXX_BUF[4096];	  
+//	u8  W25QXX_BUF[4096];	  
 //   	W25QXX_BUF=W25QXX_BUFFER;	     
  	secpos=WriteAddr/4096;//扇区地址  
 	secoff=WriteAddr%4096;//在扇区内的偏移
